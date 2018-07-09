@@ -9,5 +9,6 @@
 <body>
 	<h1>Hello World!</h1>
 	<p>盛岡情報ビジネス専門学校</p>
+	<!-- テスト -->
 </body>
 </html>
