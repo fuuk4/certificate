@@ -15,7 +15,6 @@
         <header class="head">
             <a href="https://www.google.co.jp/"></a>
             <nav class="navi">
-
             </nav>
         </header>
     </div>
