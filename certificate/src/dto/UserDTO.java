@@ -1,17 +1,24 @@
 package dto;
 
-public class StudentDTO {
+public class UserDTO {
 	private int id;
 	private String name;
 	private int grade;
 	private String className;
-
-	public StudentDTO(int id, String name, int grade, String className) {
+	private boolean maneger;
+	public UserDTO(int id, String name, int grade, String className) {
 		this.id = id;
 		this.name = name;
 		this.grade = grade;
 		this.className = className;
 	}
+
+	public UserDTO(int id, String name, boolean maneger){
+		this.id = id;
+		this.name = name;
+		this.maneger = maneger;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -35,6 +42,12 @@ public class StudentDTO {
 	}
 	public void setClassName(String className) {
 		this.className = className;
+	}
+	public boolean isManeger() {
+		return maneger;
+	}
+	public void setManeger(boolean maneger) {
+		this.maneger = maneger;
 	}
 
 

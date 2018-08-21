@@ -1,150 +1,150 @@
 .bgColor {
-    background-color: aqua;
-    background-size: 500px;
-    width: 500px;
-    height: 300px;
-    margin: 50px auto;
-    box-shadow: 2px 2px 15px gray;
-    font-family: "メイリオ", sans-serif;
+	background-color: aqua;
+	background-size: 500px;
+	width: 500px;
+	height: 300px;
+	margin: 50px auto;
+	box-shadow: 2px 2px 15px gray;
+	font-family: "メイリオ", sans-serif;
 }
 
 .loginSize {
-    width: 400px;
-    text-align: center;
-    vertical-align: middle;
-    margin: 50px auto;
+	width: 400px;
+	text-align: center;
+	vertical-align: middle;
+	margin: 50px auto;
 }
 
 .loginSize p {
-    font-size: 13.72px;
+	font-size: 13.72px;
 }
 
 .loginSize h2 {
-    margin: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .loginSize input {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    border-width: 0px;
-    margin-bottom: 10px;
-    padding: 16px;
-    outline: 0;
-    font-family: inherit;
-    font-size: 0.95em;
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	border-width: 0px;
+	margin-bottom: 10px;
+	padding: 16px;
+	outline: 0;
+	font-family: inherit;
+	font-size: 0.95em;
 }
 
 .loginSize input[type="submit"] {
-    background: #28d;
-    border-color: transparent;
-    color: #fff;
-    cursor: pointer;
+	background: #28d;
+	border-color: transparent;
+	color: #fff;
+	cursor: pointer;
 }
 
 .loginSize input[type="submit"]:hover {
-    background: #17c;
+	background: #17c;
 }
 
 .loginSize input[type="submit"]:focus {
-    border-color: #05a;
+	border-color: #05a;
 }
 
 /*メイン画面*/
-
 .nonmargin {
-    margin: 0;
+	margin: 0;
 }
 
 .wrappNavi {
-    height: 80px;
+	height: 80px;
 }
 
 .wrappMain {
-    position: relative;
+	position: relative;
 }
 
 .head {
-    display: block;
-    height: 80px;
-    width: 250px;
-    background-color: #999999;
-    float: left;
+	display: block;
+	height: 80px;
+	width: 250px;
+	background-color: #999999;
+	float: left;
 }
 
 .head a {
-    display: block;
-    float: left;
-    height: 80px;
-    width: 250px;
-    background-image: url(../image/###.png);
-    background-size: 204px 64px;
-    background-repeat: no-repeat;
-    background-position: center;
+	display: block;
+	float: left;
+	height: 80px;
+	width: 250px;
+	background-image: url(../image/###.png);
+	background-size: 204px 64px;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .navi {
-    display: block;
-    margin-left: 250px;
-    width: 100vw;
-    height: 80px;
-    background-color: #b5cbff;
-    position: relative;
+	display: block;
+	margin-left: 250px;
+	width: 100vw;
+	height: 80px;
+	background-color: #b5cbff;
+	position: relative;
 }
 
 .mainAside {
-    position: absolute;
-    min-height: 100%;
-    width: 250px;
-    height: 100vh;
-    z-index: 810;
-    background-color: #8c8c8c;
+	position: absolute;
+	min-height: 100%;
+	width: 250px;
+	height: 100vh;
+	z-index: 810;
+	background-color: #8c8c8c;
 }
 
 .sideMenu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
+	list-style: none;
+	margin: 0;
+	font-size: 20px;
+	padding-left: 20px;
+	padding-top: 20px;
 }
 
 .mainContent {
-    display: block;
-    margin-left: 250px;
-    height: 100vh;
-    background-color: #efefef;
-    z-index: 800;
+	display: block;
+	margin-left: 250px;
+	height: 100vh;
+	background-color: #efefef;
+	z-index: 800;
 }
 
-.contentHeader{
-    margin: 0;
-    padding: 10px;
-    border-bottom: solid 1px black;
+.contentHeader {
+	margin: 0;
+	padding: 10px;
+	border-bottom: solid 1px black;
 }
 
-.contentVal1{
-    position: absolute;
-    width: 400px;
-    padding: 10px;
-    top: 20px;
-    left: 270px;
-    border-radius: 4px;
-    background-color: #fffcfc;
-    box-shadow:5px 5px 10px;
+.contentVal1 {
+	position: absolute;
+	width: 400px;
+	padding: 10px;
+	top: 20px;
+	left: 270px;
+	border-radius: 4px;
+	background-color: #fffcfc;
+	box-shadow: 5px 5px 10px;
 }
 
 .footerMain {
-    margin-left: 250px;
-    width: 100vw;
-    position: absolute;
-    bottom: 0;
-    border-top: 2px solid #dddddd;
-    background-color: white;
+	margin-left: 250px;
+	width: 100vw;
+	position: absolute;
+	bottom: 0;
+	border-top: 2px solid #dddddd;
+	background-color: white;
 }
 
 .footerMain p {
-    font-family: 'Shrikhand', cursive;
-    margin: 5px;
+	font-family: 'Shrikhand', cursive;
+	margin: 5px;
 }

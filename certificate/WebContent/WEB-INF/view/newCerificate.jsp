@@ -47,8 +47,12 @@
             <div class="mainContent">
                 <div class="contentVal1">
                    <h1 class="contentHeader">
-                      メインページです。
+                      資格登録
                    </h1>
+                   <form action="#">
+                   		<input type="text" name="certificate" />
+                   		<input type="submit">
+                   </form>
                 </div>
             </div>
         </section>

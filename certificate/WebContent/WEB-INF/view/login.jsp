@@ -16,7 +16,7 @@
             </div>
             <form action="/certificate/CheckServlet">
                 <div>
-                    <input type="text" placeholder="学籍番号or教師ID" name="id">
+                    <input type="number" placeholder="学籍番号or教師ID" name="id" min="0">
                 </div>
                 <div>
                     <input type="password" placeholder="PASSWORD" name="pw">
