@@ -14,7 +14,7 @@
             <div>
                 <h2>WELCOME TO ○○○学校</h2>
             </div>
-            <form action="/certificate/CheckServlet">
+            <form action="/certificate/CheckServlet" method="post">
                 <div>
                     <input type="number" placeholder="学籍番号or教師ID" name="id" min="0">
                 </div>

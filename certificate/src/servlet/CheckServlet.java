@@ -33,10 +33,12 @@ public class CheckServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-
-		int id = Integer.parseInt(request.getParameter("id"));
-		String pw = request.getParameter("pw");
 		try{
+			int id = Integer.parseInt(request.getParameter("id"));
+			String pw = request.getParameter("pw");
+			if(pw.isEmpty()){
+				throw new NullPointerException();
+			}
 			HttpSession userval = request.getSession();
 			if(100 <= id && id <= 130){
 				UserDTO teach = User.teachSearch(id,pw);
@@ -56,6 +58,10 @@ public class CheckServlet extends HttpServlet {
 				rd.forward(request, response);
 			}
 		}catch(NullPointerException e){
+			String view = "/WEB-INF/view/noUser.jsp";
+			RequestDispatcher rd = request.getRequestDispatcher(view);
+			rd.forward(request, response);
+		}catch(NumberFormatException e){
 			String view = "/WEB-INF/view/noUser.jsp";
 			RequestDispatcher rd = request.getRequestDispatcher(view);
 			rd.forward(request, response);

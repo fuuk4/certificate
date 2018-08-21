@@ -1,3 +1,4 @@
+<%@page import="dto.UserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -18,19 +19,30 @@
 		</header>
 	</div>
 	<!--ヘッダーのした-->
+	  <%
+    	request.setCharacterEncoding("UTF-8");
+    	UserDTO user = (UserDTO) session.getAttribute("user");
+    	int id = user.getId();
+    %>
 	<div class="wrappMain">
 		<aside class="mainAside">
+		<%if(100 < id && id < 130){ %>
 			<ul class="sideMenu">
 				 <li>
                     <a href="/certificate/AddPageServlet">生徒登録</a>
                 </li>
 			</ul>
-			<ul class="sideMenu">
-				<li><a href="#">bbb</a></li>
-			</ul>
-			<ul class="sideMenu">
-				<li><a href="#">ccc</a></li>
-			</ul>
+            <ul class="sideMenu">
+                <li>
+                    <a href="/certificate/CertificateAddPage">資格登録</a>
+                </li>
+            </ul>
+             <ul class="sideMenu">
+                <li>
+                    <a href="/certificate/NewCertificateVal">合否登録</a>
+                </li>
+            </ul>
+            <%} %>
 		</aside>
 		<section>
 			<div class="mainContent">

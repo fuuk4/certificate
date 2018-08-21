@@ -25,20 +25,20 @@
     %>
     <div class="wrappMain">
         <aside class="mainAside">
+        <%if(100 < id && id < 130){ %>
             <ul class="sideMenu">
                 <li>
                     <a href="/certificate/AddPageServlet">生徒登録</a>
                 </li>
             </ul>
-            <%if(100 < id && id < 130){ %>
             <ul class="sideMenu">
                 <li>
-                    <a href="#">bbb</a>
+                    <a href="/certificate/CertificateAddPage">資格登録</a>
                 </li>
             </ul>
             <ul class="sideMenu">
                 <li>
-                    <a href="#">ccc</a>
+                    <a href="/certificate/NewCertificateVal">合否登録</a>
                 </li>
             </ul>
             <%} %>

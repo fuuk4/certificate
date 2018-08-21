@@ -1,3 +1,6 @@
+<%@page import="dto.CertificateDTO"%>
+<%@page import="dao.CertificateDAO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="dto.UserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -21,6 +24,8 @@
 	<%
     	request.setCharacterEncoding("UTF-8");
     	UserDTO user = (UserDTO) session.getAttribute("user");
+    	ArrayList<Integer> allStu = (ArrayList<Integer>) request.getAttribute("allstu");
+    	ArrayList<CertificateDTO> certificate = (ArrayList<CertificateDTO>) request.getAttribute("certificateVal");
     	int id = user.getId();
     %>
 	<div class="wrappMain">
@@ -43,12 +48,29 @@
 			<div class="mainContent">
 				<div class="contentVal1">
 					<h1 class="contentHeader">資格登録</h1>
-					<form action="/certificate/">
+					<form action="#">
 						<p>
-							資格名：<input type="text" name="certificate" required="required" />
+							<select name="id">
+								<%for(int e:allStu){%>
+									<option value="<%=e%>"><%=e %></option>
+									<%} %>
+							</select>
 						</p>
 						<p>
-							<input type="submit" value="送信">
+							<select name="">
+								<%for(CertificateDTO c : certificate){ %>
+									<option value="<%=c.getId()%>"><%=c.getName() %></option>
+								<%} %>
+							</select>
+						</p>
+						<p>
+							<select name="acceptance">
+								<option value="0">男</option>
+								<option value="1">女</option>
+							</select>
+						</p>
+						<p>
+							<input type="submit" value="送信"/>
 						</p>
 					</form>
 				</div>
