@@ -38,12 +38,17 @@
                 </li>
             </ul>
 			<%} %>
+			<ul class="sideMenu">
+            	<li>
+            		<a href="/certificate/ShowResult">一覧表示</a>
+            	</li>
+            </ul>
 		</aside>
 		<section>
 			<div class="mainContent">
 				<div class="contentVal1">
 					<h1 class="contentHeader">資格登録</h1>
-					<form action="/certificate/">
+					<form action="/certificate/AddCertificate">
 						<p>
 							資格名：<input type="text" name="certificate" required="required" />
 						</p>

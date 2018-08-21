@@ -1,3 +1,5 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="dto.CertificateDTO"%>
 <%@page import="dto.UserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -21,6 +23,7 @@
     <%
     	request.setCharacterEncoding("UTF-8");
     	UserDTO user = (UserDTO) session.getAttribute("user");
+    	ArrayList<CertificateDTO> result = (ArrayList<CertificateDTO>) request.getAttribute("result");
     	int id = user.getId();
     %>
     <div class="wrappMain">
@@ -52,8 +55,45 @@
             <div class="mainContent">
                 <div class="contentVal1">
                    <h1 class="contentHeader">
-                      メインページです。
+                     資格取得状況一覧
                    </h1>
+                   <table>
+                   		<tr>
+                   			<th>
+                   				学生名
+                   			</th>
+                   			<th>
+								資格名
+                   			</th>
+                   			<th>
+                   				受験日
+                   			</th>
+							<th>
+								合否
+							</th>
+                   		</tr>
+						<%for(CertificateDTO r : result){ %>
+                   		<tr>
+                   			<td>
+								<%=r.getUserName() %>
+                   			</td>
+                   			<td>
+								<%=r.getName() %>
+                   			</td>
+                   			<td>
+								<%=r.getDate() %>
+                   			</td>
+                   			<td>
+								<%if(r.isStats()){ %>
+								合格
+								<%}else{ %>
+								不合格
+								<%} %>
+                   			</td>
+                   		</tr>
+                   		<%} %>
+                   </table>
+
                 </div>
             </div>
         </section>

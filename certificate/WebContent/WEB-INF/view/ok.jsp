@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<META http-equiv="Refresh" content="3;URL=/certificate/HomeServlet">
 <title>Title</title>
 </head>
 <body>

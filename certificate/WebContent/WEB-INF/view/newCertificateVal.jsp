@@ -25,7 +25,7 @@
     	request.setCharacterEncoding("UTF-8");
     	UserDTO user = (UserDTO) session.getAttribute("user");
     	ArrayList<Integer> allStu = (ArrayList<Integer>) request.getAttribute("allstu");
-    	ArrayList<CertificateDTO> certificate = (ArrayList<CertificateDTO>) request.getAttribute("certificateVal");
+    	ArrayList<CertificateDTO> certificate = (ArrayList<CertificateDTO>) request.getAttribute("certificate");
     	int id = user.getId();
     %>
 	<div class="wrappMain">
@@ -43,13 +43,19 @@
                 </li>
             </ul>
 			<%} %>
+			<ul class="sideMenu">
+            	<li>
+            		<a href="/certificate/ShowResult">一覧表示</a>
+            	</li>
+            </ul>
 		</aside>
 		<section>
 			<div class="mainContent">
 				<div class="contentVal1">
 					<h1 class="contentHeader">資格登録</h1>
-					<form action="#">
+					<form action="/certificate/AddNewCertificateVal">
 						<p>
+							学籍番号：
 							<select name="id">
 								<%for(int e:allStu){%>
 									<option value="<%=e%>"><%=e %></option>
@@ -57,16 +63,22 @@
 							</select>
 						</p>
 						<p>
-							<select name="">
+							資格名：
+							<select name="certificateId">
 								<%for(CertificateDTO c : certificate){ %>
 									<option value="<%=c.getId()%>"><%=c.getName() %></option>
 								<%} %>
 							</select>
 						</p>
 						<p>
+							受験日：
+							<input type="date" name = "date">
+						</p>
+						<p>
+							合否：
 							<select name="acceptance">
-								<option value="0">男</option>
-								<option value="1">女</option>
+								<option value="0">不合格</option>
+								<option value="1">合格</option>
 							</select>
 						</p>
 						<p>

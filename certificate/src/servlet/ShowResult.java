@@ -11,20 +11,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.CertificateDAO;
-import dao.User;
 import dto.CertificateDTO;
 
 /**
- * Servlet implementation class NewCertificateVal
+ * Servlet implementation class ShowResult
  */
-@WebServlet("/NewCertificateVal")
-public class NewCertificateVal extends HttpServlet {
+@WebServlet("/ShowResult")
+public class ShowResult extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public NewCertificateVal() {
+    public ShowResult() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,13 +33,17 @@ public class NewCertificateVal extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
+//		UserDTO user = (UserDTO)request.getAttribute("user");
+//		int id = user.getId();
+		ArrayList<CertificateDTO> result = new ArrayList<>();
+//		if(100 < id && id < 130){
+			result = CertificateDAO.getAllCertificateVal();
+//		}else{
 
-		ArrayList<Integer> allStu = User.allStu();
-		request.setAttribute("allstu", allStu);
-		ArrayList<CertificateDTO> certificate = CertificateDAO.getCertificate();
-		System.out.println(certificate.get(0).getId());
-		request.setAttribute("certificate", certificate);
-		String view = "/WEB-INF/view/newCertificateVal.jsp";
+//		}
+		request.setAttribute("result", result);
+
+		String view = "/WEB-INF/view/showResult.jsp";
 		RequestDispatcher rd = request.getRequestDispatcher(view);
 		rd.forward(request, response);
 	}
