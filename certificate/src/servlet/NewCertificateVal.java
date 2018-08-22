@@ -38,7 +38,6 @@ public class NewCertificateVal extends HttpServlet {
 		ArrayList<Integer> allStu = User.allStu();
 		request.setAttribute("allstu", allStu);
 		ArrayList<CertificateDTO> certificate = CertificateDAO.getCertificate();
-		System.out.println(certificate.get(0).getId());
 		request.setAttribute("certificate", certificate);
 		String view = "/WEB-INF/view/newCertificateVal.jsp";
 		RequestDispatcher rd = request.getRequestDispatcher(view);

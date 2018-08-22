@@ -16,10 +16,10 @@
             </div>
             <form action="/certificate/CheckServlet" method="post">
                 <div>
-                    <input type="number" placeholder="学籍番号or教師ID" name="id" min="0">
+                    <input type="number" placeholder="学籍番号or教師ID" name="id" min="0" required>
                 </div>
                 <div>
-                    <input type="password" placeholder="PASSWORD" name="pw">
+                    <input type="password" placeholder="PASSWORD" name="pw" required>
                 </div>
                 <div>
                     <p>学籍番号や教師IDがない場合は、担当の方に連絡してください。</p>

@@ -5,7 +5,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
 <meta charset="UTF-8">
 <title>Document</title>
@@ -52,7 +52,7 @@
 		<section>
 			<div class="mainContent">
 				<div class="contentVal1">
-					<h1 class="contentHeader">資格登録</h1>
+					<h1 class="contentHeader">合否登録</h1>
 					<form action="/certificate/AddNewCertificateVal">
 						<p>
 							学籍番号：

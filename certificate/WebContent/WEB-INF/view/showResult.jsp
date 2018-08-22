@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -57,7 +57,7 @@
                    <h1 class="contentHeader">
                      資格取得状況一覧
                    </h1>
-                   <table>
+                   <table class="table">
                    		<tr>
                    			<th>
                    				学生名
